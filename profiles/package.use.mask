@@ -2,9 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # Trying to use doc with the following packages results in an error:
-### /bin/sh: dsss_swig_doc_swig_docs/Doxyfile: Permission denied
+### /bin/sh: *_swig_doc_swig_docs/Doxyfile: Permission denied
 
 =net-wireless/gr-dsss-9999 doc
 =net-wireless/gr-gps-9999 doc
 =net-wireless/gr-lte-9999 doc
 =net-wireless/gr-tpms-9999 doc
+=net-wireless/gr-cdma-9999 doc
+=net-wireless/gr-mac-9999 doc
+=net-wireless/gr-mapper-9999 doc
+=net-wireless/gr-message_tools-9999 doc
+=net-wireless/gr-tagutils-9999 doc

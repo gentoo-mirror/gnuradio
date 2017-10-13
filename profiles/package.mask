@@ -1,0 +1,6 @@
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+# These ebuilds are currently failing due to unknown reasons
+
+=net-wireless/gr-ldpc-9999
