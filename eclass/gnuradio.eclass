@@ -21,7 +21,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit cmake-utils python-single-r1
 
-EXPORT_FUNCTIONS src_prepare src_configure
+EXPORT_FUNCTIONS src_configure
 
 LICENSE="GPL-3"
 SLOT="0/${PV}"
@@ -34,7 +34,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # An array of USE flags dependencies that need to be enabled for 
 # net-wireless/gnuradio. WARNING: If you want this variable to work, 
 # you MUST define it before inheriting this eclass.
-
 
 # @FUNCTION: _gnuradio_join_use_deps
 # @USAGE: _gnuradio_join_use_deps
@@ -64,21 +63,8 @@ RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[$(_gnuradio_join_use_deps)]
     ${PYTHON_DEPS}"
 
 DEPEND="${RDEPEND}
+	dev-util/cppunit:=
     dev-lang/swig:0"
-
-gnuradio_src_prepare() {
-    debug-print-function ${FUNCNAME} "$@"
-
-    [[ ${EAPI:-0} -eq 6 ]] && default
-
-    cmake-utils_src_prepare
-
-    #although cppunit is not used, it fails if it isn't there, fix it
-    sed -i 's#FATAL_ERROR "CppUnit#MESSAGE "CppUnit#' CMakeLists.txt || die
-    sed -i '/${CPPUNIT_INCLUDE_DIRS}/d' CMakeLists.txt || die
-    sed -i '/${CPPUNIT_LIBRARY_DIRS}/d' CMakeLists.txt || die
-    
-}
 
 gnuradio_src_configure() {
     debug-print-function ${FUNCNAME} "$@"
