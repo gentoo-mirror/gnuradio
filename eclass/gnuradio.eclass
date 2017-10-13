@@ -10,11 +10,11 @@
 # for GNURadio packages/addons.
 
 case "${EAPI:-0}" in
-	5|6)
-		;;
-	*)
-		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
-		;;
+    5|6)
+        ;;
+    *)
+        die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
+        ;;
 esac
 
 PYTHON_COMPAT=( python2_7 )
@@ -45,45 +45,45 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # $PYTHON_USEDEP.
 
 _gnuradio_join_use_deps() {
-	local use_deps
+    local use_deps
 
     if [[ -z $GNURADIO_USE_DEPS ]]; then
-		use_deps="$PYTHON_USEDEP"
-	else
-		use_deps=${GNURADIO_USE_DEPS[@]}
-		use_deps+=( "${PYTHON_USEDEP}" )
-	fi
+        use_deps="$PYTHON_USEDEP"
+    else
+        use_deps=${GNURADIO_USE_DEPS[@]}
+        use_deps+=( "${PYTHON_USEDEP}" )
+    fi
 
-	# Join the elements of the array with commas
-	use_deps="$(printf ",%s" "${use_deps[@]}")"
-	echo -n "${use_deps:1}"
+    # Join the elements of the array with commas
+    use_deps="$(printf ",%s" "${use_deps[@]}")"
+    echo -n "${use_deps:1}"
 }
 
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[$(_gnuradio_join_use_deps)]
-	dev-libs/boost:=[${PYTHON_USEDEP}]
-	${PYTHON_DEPS}"
+    dev-libs/boost:=[${PYTHON_USEDEP}]
+    ${PYTHON_DEPS}"
 
 DEPEND="${RDEPEND}
-	dev-lang/swig:0"
+    dev-lang/swig:0"
 
 gnuradio_src_prepare() {
     debug-print-function ${FUNCNAME} "$@"
 
-	[[ ${EAPI:-0} -eq 6 ]] && default
+    [[ ${EAPI:-0} -eq 6 ]] && default
 
-	cmake-utils_src_prepare
+    cmake-utils_src_prepare
 
-	#although cppunit is not used, it fails if it isn't there, fix it
-	sed -i 's#FATAL_ERROR "CppUnit#MESSAGE "CppUnit#' CMakeLists.txt || die
-	sed -i '/${CPPUNIT_INCLUDE_DIRS}/d' CMakeLists.txt || die
-	sed -i '/${CPPUNIT_LIBRARY_DIRS}/d' CMakeLists.txt || die
-	
+    #although cppunit is not used, it fails if it isn't there, fix it
+    sed -i 's#FATAL_ERROR "CppUnit#MESSAGE "CppUnit#' CMakeLists.txt || die
+    sed -i '/${CPPUNIT_INCLUDE_DIRS}/d' CMakeLists.txt || die
+    sed -i '/${CPPUNIT_LIBRARY_DIRS}/d' CMakeLists.txt || die
+    
 }
 
 gnuradio_src_configure() {
     debug-print-function ${FUNCNAME} "$@"
 
-	local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
-	cmake-utils_src_configure
+    local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
+    cmake-utils_src_configure
 }
 
