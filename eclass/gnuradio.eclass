@@ -84,7 +84,11 @@ fi
 gnuradio_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
+	if [[ -z $mycmakeargs ]]; then
+		local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
+	else
+		mycmakeargs+=( -DPYTHON_EXECUTABLE="${PYTHON}" )
+	fi
 
 	if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
 		mycmakeargs+=(
