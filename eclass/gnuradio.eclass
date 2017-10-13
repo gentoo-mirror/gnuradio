@@ -10,11 +10,11 @@
 # for GNURadio packages/addons.
 
 case "${EAPI:-0}" in
-    5|6)
-        ;;
-    *)
-        die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
-        ;;
+	5|6)
+		;;
+	*)
+		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
+		;;
 esac
 
 PYTHON_COMPAT=( python2_7 )
@@ -54,44 +54,44 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # $PYTHON_USEDEP.
 
 _gnuradio_join_use_deps() {
-    local use_deps
+	local use_deps
 
-    if [[ -z $GNURADIO_USE_DEPS ]]; then
-        use_deps="$PYTHON_USEDEP"
-    else
-        use_deps=${GNURADIO_USE_DEPS[@]}
-        use_deps+=( "${PYTHON_USEDEP}" )
-    fi
+	if [[ -z $GNURADIO_USE_DEPS ]]; then
+		use_deps="$PYTHON_USEDEP"
+	else
+		use_deps=${GNURADIO_USE_DEPS[@]}
+		use_deps+=( "${PYTHON_USEDEP}" )
+	fi
 
-    # Join the elements of the array with commas
-    use_deps="$(printf ",%s" "${use_deps[@]}")"
-    echo -n "${use_deps:1}"
+	# Join the elements of the array with commas
+	use_deps="$(printf ",%s" "${use_deps[@]}")"
+	echo -n "${use_deps:1}"
 }
 
 RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[$(_gnuradio_join_use_deps)]
-    dev-libs/boost:=[${PYTHON_USEDEP}]
-    ${PYTHON_DEPS}"
+	dev-libs/boost:=[${PYTHON_USEDEP}]
+	${PYTHON_DEPS}"
 
 DEPEND="${RDEPEND}
-    dev-util/cppunit:=
-    dev-lang/swig:0"
+	dev-util/cppunit:=
+	dev-lang/swig:0"
 
 if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then 
-    DEPEND="${DEPEND}
-        doc? ( app-doc/doxygen:= )"
+	DEPEND="${DEPEND}
+		doc? ( app-doc/doxygen:= )"
 fi
 
 gnuradio_src_configure() {
-    debug-print-function ${FUNCNAME} "$@"
+	debug-print-function ${FUNCNAME} "$@"
 
-    local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
+	local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
 
-    if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
-        mycmakeargs+=(
-            -DENABLE_DOXYGEN="$(usex doc)"
-            -DWITH_ENABLE_DOXYGEN="$(usex doc)"
-        )
-    fi
+	if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
+		mycmakeargs+=(
+			-DENABLE_DOXYGEN="$(usex doc)"
+			-DWITH_ENABLE_DOXYGEN="$(usex doc)"
+		)
+	fi
 
-    cmake-utils_src_configure
+	cmake-utils_src_configure
 }
