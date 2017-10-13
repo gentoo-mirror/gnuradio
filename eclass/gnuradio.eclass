@@ -89,7 +89,9 @@ gnuradio_src_configure() {
 	if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
 		mycmakeargs+=(
 			-DENABLE_DOXYGEN="$(usex doc)"
-			-DWITH_ENABLE_DOXYGEN="$(usex doc)"
+			
+			# This may not be needed at all
+			# -DWITH_ENABLE_DOXYGEN="$(usex doc)"
 		)
 	fi
 
