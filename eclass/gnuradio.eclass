@@ -25,7 +25,7 @@ PYTHON_COMPAT=( python2_7 )
 LICENSE="GPL-3"
 SLOT="0/${PV}"
 
-RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[qt4,${PYTHON_USEDEP}]
+RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[${PYTHON_USEDEP}]
 	dev-libs/boost:=[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"
 
