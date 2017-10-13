@@ -1,0 +1,7 @@
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+# Trying to use doc fails with the following error:
+### /bin/sh: dsss_swig_doc_swig_docs/Doxyfile: Permission denied
+
+=net-wireless/gr-dsss-9999 doc
