@@ -6,6 +6,6 @@
 		<name>hololeap</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">argilo/gr-elster</remote-id>
+		<remote-id type="github">slaaja/gr-gps</remote-id>
 	</upstream>
 </pkgmetadata>
