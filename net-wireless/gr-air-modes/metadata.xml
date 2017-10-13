@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>hololeap@gmail.com</email>
+		<name>hololeap</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">bistromath/gr-air-modes</remote-id>
+	</upstream>
+	<use>
+		<flag name="flightgear">Send detected aircraft data to FlightGear server</flag>
+		<flag name="gui">Build standalone GUI executable (modes_gui)</flag>
+	</use>
+
+</pkgmetadata>
