@@ -35,6 +35,16 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # net-wireless/gnuradio. WARNING: If you want this variable to work, 
 # you MUST define it before inheriting this eclass.
 
+# @ECLASS-VARIABLE: GNURADIO_DOC_SUPPORED
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If this is set to "f", the "doc" USE flag will be removed and
+# the relevant parts of src_configure() will be skipped.
+# WARNING: If you want this variable to work, you MUST define it 
+# before inheriting this eclass.
+
+[[ "$GNURADIO_DOC_SUPPORTED" != f ]] && IUSE="doc"
+
 # @FUNCTION: _gnuradio_join_use_deps
 # @USAGE: _gnuradio_join_use_deps
 # @RETURN: A comma-seperated USE dependency value
@@ -66,10 +76,22 @@ DEPEND="${RDEPEND}
 	dev-util/cppunit:=
     dev-lang/swig:0"
 
+if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then 
+	DEPEND="${DEPEND}
+		doc? ( app-doc/doxygen:= )"
+fi
+
 gnuradio_src_configure() {
     debug-print-function ${FUNCNAME} "$@"
 
     local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
+
+	if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
+		mycmakeargs+=(
+			-DENABLE_DOXYGEN="$(usex doc)"
+	        -DWITH_ENABLE_DOXYGEN="$(usex doc)"
+	    )
+	fi
+
     cmake-utils_src_configure
 }
-
