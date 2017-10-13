@@ -73,12 +73,12 @@ RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[$(_gnuradio_join_use_deps)]
     ${PYTHON_DEPS}"
 
 DEPEND="${RDEPEND}
-	dev-util/cppunit:=
+    dev-util/cppunit:=
     dev-lang/swig:0"
 
 if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then 
-	DEPEND="${DEPEND}
-		doc? ( app-doc/doxygen:= )"
+    DEPEND="${DEPEND}
+        doc? ( app-doc/doxygen:= )"
 fi
 
 gnuradio_src_configure() {
@@ -86,12 +86,12 @@ gnuradio_src_configure() {
 
     local mycmakeargs=( -DPYTHON_EXECUTABLE="${PYTHON}" )
 
-	if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
-		mycmakeargs+=(
-			-DENABLE_DOXYGEN="$(usex doc)"
-	        -DWITH_ENABLE_DOXYGEN="$(usex doc)"
-	    )
-	fi
+    if [[ "$GNURADIO_DOC_SUPPORTED" != f ]]; then
+        mycmakeargs+=(
+            -DENABLE_DOXYGEN="$(usex doc)"
+            -DWITH_ENABLE_DOXYGEN="$(usex doc)"
+        )
+    fi
 
     cmake-utils_src_configure
 }
