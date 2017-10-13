@@ -1,0 +1,53 @@
+gr-bokehgui:
+    - source: https://github.com/gnuradio/gr-bokehgui
+    - desc: Web based display for GNU Radio
+    - requires:
+        - dev-python/bokeh
+
+gr-burst:
+    - source: https://github.com/gr-vt/gr-burst
+    - desc: Burst PSK Modem Building Blocks
+    - requires:
+        - net-wireless/gr-mapper
+        - net-wireless/gr-eventstream
+
+gr-compat:
+    - source: https://github.com/osh/grcompat
+    - desc: Compatibility layer for various gnuradio APIs and libraries
+
+gr-drm:
+    - source: https://github.com/kit-cel/gr-drm
+    - desc: DRM transmitter using GNU Radio
+    - requires:
+        - net-wireless/gr-compat
+        - media-libs/faac
+        - media-libs/faad2
+
+gr-ettus:
+    - source: https://github.com/EttusResearch/gr-ettus
+    - desc: Out-of-tree Module for Experimental Ettus Research Features
+    - requires:
+        - net-wireless/uhd
+
+gr-eventstream:
+    - source: https://github.com/osh/gr-eventstream
+    - desc: Blocks for creating timed events and inserting/extracting them from data-streams precisely.
+    - requires:
+        - net-misc/curl
+
+gr-husban:
+    - source: https://github.com/miek/gr-hubsan
+    - desc: Blocks for transmitting and receiving Hubsan X4 controller signals (fly quadcopters with SDR!) 
+    - requires:
+        - net-wireless/gr-burst
+        - net-wireless/gr-eventstream
+        - net-wireless/pyqt
+
+gr-specest:
+    - source: https://github.com/kit-cel/gr-specest
+    - desc: A module adding spectral estimation routines to GNU Radio.  
+    - requires:
+        - sys-devel/gcc[fortran]
+        - virtual/lapack
+        - virtual/blas
+

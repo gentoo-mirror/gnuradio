@@ -1,0 +1,4 @@
+- Add workaround for failing docs to eclass
+- Figure out a way to add per-package dependencies that need $PYTHON_USEDEP
+  to the eclass
+  For example: uhd? ( net-wireless/uhd:=[${PYTHON_USEDEP}] )
