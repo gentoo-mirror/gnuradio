@@ -6,6 +6,6 @@
 		<name>hololeap</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">gr-vt/gr-mapper</remote-id>
+		<remote-id type="github">osmocom/gr-osmosdr</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -6,6 +6,9 @@
 		<name>hololeap</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">gr-vt/gr-mapper</remote-id>
+		<remote-id type="github">balint256/gr-baz</remote-id>
 	</upstream>
+	<use>
+		<flag name="armadillo">install MUSIC DOA estimator block</flag>
+	</use>
 </pkgmetadata>
