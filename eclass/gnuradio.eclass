@@ -35,12 +35,24 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # net-wireless/gnuradio. WARNING: If you want this variable to work, 
 # you MUST define it before inheriting this eclass.
 
-GNURADIO_USE_DEPS+=( "${PYTHON_USEDEP}" )
+# @FUNCTION: _gnuradio_join_use_deps
+# @USAGE: _gnuradio_join_use_deps
+# @RETURN: A comma-seperated USE dependency value
+# @INTERNAL
+# @DESCRIPTION:
+# Join any custom USE dependencies (set using $GNURADIO_USE_DEPS) and
+# $PYTHON_USEDEP.
 
-# Join the elements of GNURADIO_USE_DEPS with commas
-local use_deps=$(printf ",%s" "${GNURADIO_USE_DEPS[@]}")
+_gnuradio_join_use_deps() {
+	local use_deps=${GNURADIO_USE_DEPS[@]}
+    use_deps+=( "${PYTHON_USEDEP}" )
 
-RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[${use_deps:1}]
+	# Join the elements of the array with commas
+	use_deps="$(printf ",%s" "${use_deps[@]}")"
+	echo -n "${use_deps:1}"
+}
+
+RDEPEND=">=net-wireless/gnuradio-3.7_rc:0=[$(_gnuradio_join_use_deps)]
 	dev-libs/boost:=[${PYTHON_USEDEP}]
 	${PYTHON_DEPS}"
 
@@ -50,7 +62,7 @@ DEPEND="${RDEPEND}
 gnuradio_src_prepare() {
     debug-print-function ${FUNCNAME} "$@"
 
-	if [[ ${EAPI:-0} -eq 6 ]]; then default; fi
+	[[ ${EAPI:-0} -eq 6 ]] && default
 
 	cmake-utils_src_prepare
 
