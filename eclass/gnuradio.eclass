@@ -35,6 +35,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # net-wireless/gnuradio. WARNING: If you want this variable to work, 
 # you MUST define it before inheriting this eclass.
 
+
 # @FUNCTION: _gnuradio_join_use_deps
 # @USAGE: _gnuradio_join_use_deps
 # @RETURN: A comma-seperated USE dependency value
@@ -44,8 +45,14 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # $PYTHON_USEDEP.
 
 _gnuradio_join_use_deps() {
-	local use_deps=${GNURADIO_USE_DEPS[@]}
-    use_deps+=( "${PYTHON_USEDEP}" )
+	local use_deps
+
+    if [[ -z $GNURADIO_USE_DEPS ]]; then
+		use_deps="$PYTHON_USEDEP"
+	else
+		use_deps=${GNURADIO_USE_DEPS[@]}
+		use_deps+=( "${PYTHON_USEDEP}" )
+	fi
 
 	# Join the elements of the array with commas
 	use_deps="$(printf ",%s" "${use_deps[@]}")"
