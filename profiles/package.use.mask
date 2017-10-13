@@ -13,3 +13,4 @@
 =net-wireless/gr-mapper-9999 doc
 =net-wireless/gr-message_tools-9999 doc
 =net-wireless/gr-tagutils-9999 doc
+=net-wireless/gr-baz-9999 doc
