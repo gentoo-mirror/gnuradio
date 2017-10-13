@@ -6,3 +6,4 @@
 
 =net-wireless/gr-dsss-9999 doc
 =net-wireless/gr-gps-9999 doc
+=net-wireless/gr-lte-9999 doc
