@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<maintainer type="person">
 		<email>hololeap@gmail.com</email>
-		<name>hololeap</name>
 	</maintainer>
 	<upstream>
 		<remote-id type="github">balint256/gr-baz</remote-id>
