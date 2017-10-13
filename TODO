@@ -2,3 +2,4 @@
 - Figure out a way to add per-package dependencies that need $PYTHON_USEDEP
   to the eclass
   For example: uhd? ( net-wireless/uhd:=[${PYTHON_USEDEP}] )
+- Incorperate the gr-etcetera tree as well (at least add to TODO-pkgs)
