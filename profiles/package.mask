@@ -11,3 +11,6 @@
 # This package seems to be integrated into the core gnuradio package now
 # (Fails due to file collisions)
 =net-wireless/gr-pager-9999
+
+# Causes gnuradio's docstring loader to crash
+=net-wireless/gr-radar-9999
