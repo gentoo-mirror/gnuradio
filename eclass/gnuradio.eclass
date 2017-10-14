@@ -35,7 +35,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # net-wireless/gnuradio. WARNING: If you want this variable to work, 
 # you MUST define it before inheriting this eclass.
 
-# @ECLASS-VARIABLE: GNURADIO_DOC_SUPPORED
+# @ECLASS-VARIABLE: GNURADIO_DOC_SUPPORTED
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # If this is set to "f", the "doc" USE flag will be removed and
