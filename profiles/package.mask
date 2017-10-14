@@ -2,5 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # These ebuilds are currently failing due to unknown reasons
-
 =net-wireless/gr-ldpc-9999
+=net-wireless/gr-fbmc-9999
+
+# This package does not use cmake and needs review
+=net-wireless/gr-benchmark-9999
+
+# This package seems to be integrated into the core gnuradio package now
+# (Fails due to file collisions)
+=net-wireless/gr-pager-9999

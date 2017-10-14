@@ -14,3 +14,9 @@
 =net-wireless/gr-message_tools-9999 doc
 =net-wireless/gr-tagutils-9999 doc
 =net-wireless/gr-baz-9999 doc
+=net-wireless/gr-dvbs2-9999 doc
+=net-wireless/gr-fbmc-9999 doc
+=net-wireless/gr-framers-9999 doc
+=net-wireless/gr-ra_blocks-9999 doc
+=net-wireless/gr-rstt-9999 doc
+=net-wireless/gr-rtty-9999 doc

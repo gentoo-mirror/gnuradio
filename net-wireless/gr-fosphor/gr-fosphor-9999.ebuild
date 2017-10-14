@@ -20,8 +20,7 @@ RDEPEND="qt4? (
 	media-libs/freetype
 	glfw? ( >=media-libs/glfw-3 )
 	virtual/opencl
-	virtual/opengl
-"
+	virtual/opengl"
 
 inherit gnuradio git-r3
 
