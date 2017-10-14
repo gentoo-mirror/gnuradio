@@ -1,0 +1,8 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+net-wireless/gr-air-modes:flightgear - Send detected aircraft data to FlightGear server
+net-wireless/gr-air-modes:gui - Build standalone GUI executable (modes_gui)
+net-wireless/gr-baz:armadillo - install MUSIC DOA estimator block
+net-wireless/gr-fosphor:glfw - enable GLFW based interface
