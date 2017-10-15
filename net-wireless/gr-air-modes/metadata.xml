@@ -7,9 +7,4 @@
 	<upstream>
 		<remote-id type="github">bistromath/gr-air-modes</remote-id>
 	</upstream>
-	<use>
-		<flag name="flightgear">Send detected aircraft data to FlightGear server</flag>
-		<flag name="gui">Build standalone GUI executable (modes_gui)</flag>
-	</use>
-
 </pkgmetadata>
