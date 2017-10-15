@@ -1,4 +1,5 @@
 net-libs/libad9361 9999: IIO AD9361 library for filter design and handling, multi-chip sync, etc.
+net-libs/libfec 9999: Clone of Phil Karn's libfec with capability to build on x86-64
 net-libs/libiio 9999: Library for interfacing with IIO devices
 net-libs/libosmo-dsp 9999: Osmocom DSP utility functions
 net-libs/libperseus-sdr 9999: Perseus Software Defined Radio Control Library for Linux

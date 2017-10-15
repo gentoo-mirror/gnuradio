@@ -1,0 +1,9 @@
+DEFINED_PHASES=unpack
+DEPEND=>=dev-vcs/git-1.8.2.1
+DESCRIPTION=Clone of Phil Karn's libfec with capability to build on x86-64
+EAPI=6
+HOMEPAGE=https://github.com/daniestevez/libfec
+LICENSE=LGPL-2.1
+SLOT=0/9999
+_eclasses_=git-r3	52a888802d25387c2c74cb845d1219bc
+_md5_=df10fe8d22f823b8319bff043c7cb493
