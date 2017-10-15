@@ -20,3 +20,4 @@
 =net-wireless/gr-ra_blocks-9999 doc
 =net-wireless/gr-rstt-9999 doc
 =net-wireless/gr-rtty-9999 doc
+=net-wireless/gr-foo-9999 doc
