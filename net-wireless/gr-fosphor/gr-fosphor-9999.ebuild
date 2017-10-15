@@ -4,11 +4,12 @@
 EAPI=6
 
 DESCRIPTION="RTSA-like spectrum visualization using OpenCL and OpenGL"
-HOMEPAGE="git://git.osmocom.org/gr-fosphor"
+HOMEPAGE="https://github.com/osmocom/gr-fosphor"
 
-EGIT_REPO_URI="git://git.osmocom.org/gr-fosphor"
+EGIT_REPO_URI="https://github.com/osmocom/gr-fosphor"
 KEYWORDS=""
 
-RDEPEND="media-libs/glfw"
+RDEPEND="virtual/opencl virtual/opengl media-libs/glfw"
+GNURADIO_USE_DEPS=( qt4 )
 
 inherit gnuradio git-r3

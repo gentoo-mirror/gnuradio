@@ -5,6 +5,6 @@
 		<email>hololeap@gmail.com</email>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">osmocom/gr-fosphor</remote-id>
+		<remote-id type="github">analogdevicesinc/libiio</remote-id>
 	</upstream>
 </pkgmetadata>
