@@ -8,4 +8,3 @@ iqbalance - Enable support for I/Q balancing using gr-iqbal
 mirisdr - Build with Mirics MSi2500 + MSi001 SDR support
 rtlsdr - Build with Realtek RTL2832U (rtlsdr) support
 uhd - Build with Ettus Research USRP Hardware Driver support
-
