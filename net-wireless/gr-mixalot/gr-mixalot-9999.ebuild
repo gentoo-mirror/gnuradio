@@ -6,7 +6,8 @@ EAPI=6
 DESCRIPTION="GNU Radio pager encoder"
 HOMEPAGE="https://github.com/unsynchronized/gr-mixalot"
 
-EGIT_REPO_URI="https://github.com/unsynchronized/gr-mixalot"
+#EGIT_REPO_URI="https://github.com/unsynchronized/gr-mixalot"
+EGIT_REPO_URI="https://github.com/hololeap/gr-mixalot"
 KEYWORDS=""
 
 RDEPEND="net-wireless/gr-osmosdr sci-libs/itpp"

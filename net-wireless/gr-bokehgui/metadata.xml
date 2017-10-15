@@ -5,6 +5,6 @@
 		<email>hololeap@gmail.com</email>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">gnuradio/gr-bokehgui</remote-id>
+		<remote-id type="github">kartikp1995/gr-bokehgui</remote-id>
 	</upstream>
 </pkgmetadata>
