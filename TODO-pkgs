@@ -42,12 +42,6 @@ net-wireless/gr-drm:
         - media-libs/faac
         - media-libs/faad2
 
-net-wireless/gr-dvbt:
-    - source: https://github.com/BogdanDIA/gr-dvbt
-    - desc: DVB-T implementation in gnuradio
-    - requires:
-        - sci-libs/volk
-
 net-wireless/gr-ettus:
     - source: https://github.com/EttusResearch/gr-ettus
     - desc: Out-of-tree Module for Experimental Ettus Research Features
@@ -110,23 +104,12 @@ net-wireless/gr-inspector:
         - x11-libs/qwtplot3d
         - net-wireless/gr-specest
 
-net-wireless/gr-iridium:
-    - source: https://github.com/muccc/gr-iridium
-    - desc: GNU Radio iridium burst detector and demodulator
-    - requires:
-        - sci-libs/scipy
-        - net-wireless/gr-osmosdr
-
 net-wireless/gr-mixalot:
     - source: https://github.com/unsynchronized/gr-mixalot
     - desc: POCSAG encoder blocks for GNU radio
     - requires:
         - net-wireless/gr-compat
         - sci-libs/itpp
-
-net-wireless/gr-nordic:
-    - source: https://github.com/BastilleResearch/gr-nordic
-    - desc: GNU Radio module and Wireshark dissector for the Nordic Semiconductor nRF24L Enhanced Shockburst protocol.
 
 net-wireless/gr-ofdm:
     - source: https://github.com/rwth-ti/gr-ofdm
