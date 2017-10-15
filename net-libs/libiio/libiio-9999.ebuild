@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/analogdevicesinc/libiio"
 EGIT_REPO_URI="https://github.com/analogdevicesinc/libiio"
 KEYWORDS=""
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
 
 RDEPEND="dev-libs/libxml2:=

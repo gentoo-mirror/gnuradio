@@ -9,6 +9,7 @@ HOMEPAGE="https://github.com/daniestevez/gr-satellites"
 EGIT_REPO_URI="https://github.com/daniestevez/gr-satellites"
 KEYWORDS=""
 
-RDEPEND="virtual/libfec virtual/pyconstruct"
+RDEPEND="net-libs/libfec:=
+	dev-python/construct:="
 
 inherit gnuradio git-r3

@@ -6,7 +6,8 @@ EAPI=6
 DESCRIPTION="modern gnuradio blocks for AMPS mobile devices"
 HOMEPAGE="https://github.com/unsynchronized/gr-amps"
 
-EGIT_REPO_URI="https://github.com/unsynchronized/gr-amps"
+#EGIT_REPO_URI="https://github.com/unsynchronized/gr-amps"
+EGIT_REPO_URI="https://github.com/hololeap/gr-amps"
 KEYWORDS=""
 
 inherit gnuradio git-r3

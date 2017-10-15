@@ -9,6 +9,6 @@ HOMEPAGE="https://github.com/osh/gr-mediatools"
 EGIT_REPO_URI="https://github.com/osh/gr-mediatools"
 KEYWORDS=""
 
-RDEPEND="media-video/libav"
+RDEPEND="virtual/ffmpeg"
 
 inherit gnuradio git-r3
