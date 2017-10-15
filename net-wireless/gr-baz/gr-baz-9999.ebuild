@@ -3,20 +3,12 @@
 
 EAPI=6
 
-DESCRIPTION="Gnuradio baz"
-HOMEPAGE="https://github.com/balint256/gr-baz.git"
-EGIT_REPO_URI="https://github.com/balint256/gr-baz.git"
+DESCRIPTION="Collection of new blocks for GNU Radio http://wiki.spench.net/wiki/gr-baz"
+HOMEPAGE="https://github.com/balint256/gr-baz"
 
-IUSE="armadillo rtlsdr uhd"
+EGIT_REPO_URI="https://github.com/balint256/gr-baz"
+KEYWORDS=""
 
-RDEPEND="armadillo? ( sci-libs/armadillo:= )
-	rtlsdr? ( virtual/libusb:1= )
-	uhd? ( net-wireless/uhd:= )"
+RDEPEND="net-wireless/uhd net-misc/curl sci-libs/armadillo net-wireless/gr-compat"
 
 inherit gnuradio git-r3
-
-#src_install() {
-#	cmake-utils_src_install
-#	insinto /usr/share/${PN}
-#	doins -r samples/*
-#}

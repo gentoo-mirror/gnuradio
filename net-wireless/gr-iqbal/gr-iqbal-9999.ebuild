@@ -5,9 +5,12 @@ EAPI=6
 
 DESCRIPTION="gnuradio I/Q balancing"
 HOMEPAGE="https://git.osmocom.org/gr-iqbal/"
-# Also mirrored at https://github.com/osmocom/gr-iqbal
 
 EGIT_REPO_URI="https://github.com/osmocom/gr-iqbal"
 KEYWORDS=""
+
+EGIT_SUBMODULES=()
+
+RDEPEND="net-libs/libosmo-dsp:="
 
 inherit gnuradio git-r3

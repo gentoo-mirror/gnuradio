@@ -7,6 +7,7 @@ DESCRIPTION="Some additional blocks like packetpad that are required by, e.g., g
 HOMEPAGE="https://github.com/bastibl/gr-foo"
 
 EGIT_REPO_URI="https://github.com/bastibl/gr-foo"
+EGIT_BRANCH="master"
 KEYWORDS=""
 
 inherit gnuradio git-r3
