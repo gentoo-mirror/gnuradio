@@ -9,6 +9,6 @@ HOMEPAGE="https://github.com/osh/gr-pcap"
 EGIT_REPO_URI="https://github.com/osh/gr-pcap"
 KEYWORDS=""
 
-RDEPEND="virtual/python-scapy"
+RDEPEND="net-analyzer/scapy:="
 
 inherit gnuradio git-r3

@@ -9,7 +9,7 @@ HOMEPAGE="https://github.com/analogdevicesinc/libad9361-iio"
 EGIT_REPO_URI="https://github.com/analogdevicesinc/libad9361-iio"
 KEYWORDS=""
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
 
 RDEPEND="net-libs/libiio:="
