@@ -1,0 +1,10 @@
+DEFINED_PHASES=unpack
+DEPEND=virtual/libusb:1= >=dev-vcs/git-1.8.2.1
+DESCRIPTION=Perseus Software Defined Radio Control Library for Linux
+EAPI=6
+HOMEPAGE=https://github.com/Microtelecom/libperseus-sdr
+LICENSE=GPL-3
+RDEPEND=virtual/libusb:1=
+SLOT=0/9999
+_eclasses_=git-r3	52a888802d25387c2c74cb845d1219bc
+_md5_=ed26ff0ab8bbda1f689391b7296272c8
