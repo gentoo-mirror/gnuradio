@@ -14,6 +14,7 @@
 =net-wireless/gr-fsk-burst-9999
 =net-wireless/gr-psk-burst-9999
 =net-wireless/gr-supacars-9999
+=net-wireless/gr-amps-9999
 
 # This package seems to be integrated into the core gnuradio package now
 # (Fails due to file collisions)
@@ -21,6 +22,8 @@
 
 # Causes gnuradio's docstring loader to crash
 =net-wireless/gr-radar-9999
+=net-wireless/gr-pyqt-9999
+=net-wireless/smithchart-9999
 
 # Seems to ignore dest directory during install phase
 =net-libs/libfec-9999
