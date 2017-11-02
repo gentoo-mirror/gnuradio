@@ -10,5 +10,29 @@ EGIT_REPO_URI="https://github.com/EttusResearch/uhd"
 KEYWORDS=""
 
 EGIT_BRANCH="rfnoc-devel"
+EGIT_SUBMODULES=()
+
+S="${WORKDIR}/${P}/host"
+
+IUSE="gpsd"
+
+RDEPEND="gpsd? ( sci-geosciences/gpsd:= )
+	virtual/libusb:1=
+	dev-lang/orc:=
+	sys-libs/ncurses:0=[-tinfo]"
+
+DEPEND="dev-python/mako
+	dev-python/cheetah
+	app-arch/unzip"
 
 inherit gnuradio git-r3
+
+src_configure() {
+	local mycmakeargs=(
+		-DENABLE_GPSD="$(usex gpsd)"
+		-DENABLE_E100=yes
+		-DENABLE_E300=yes
+	)
+
+	gnuradio_src_configure
+}
