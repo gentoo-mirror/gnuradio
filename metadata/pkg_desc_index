@@ -3,6 +3,7 @@ net-libs/libfec 9999: Clone of Phil Karn's libfec with capability to build on x8
 net-libs/libiio 9999: Library for interfacing with IIO devices
 net-libs/libosmo-dsp 9999: Osmocom DSP utility functions
 net-libs/libperseus-sdr 9999: Perseus Software Defined Radio Control Library for Linux
+net-wireless/gnuradio 9999: Toolkit that provides signal processing blocks to implement software radios
 net-wireless/gr-acars2 9999: GNU Radio block for ACARS transmissions
 net-wireless/gr-adsb 9999: GNU Radio ADSB decoder and framer
 net-wireless/gr-air-modes 9999: GNU Radio Mode-S/ADS-B decoder
@@ -122,3 +123,5 @@ net-wireless/gr-tutorial 9999: Tutorial OOT module for GNU Radio
 net-wireless/gr-uhdgps 9999: Blocks to assist in GPS Data logging with UHD and a GPSDO
 net-wireless/gr-ysf 9999: GNU Radio modules for decoding Yaesu System Fusion C4FM packets
 net-wireless/gr-zmqblocks 9999: Connect to flowgraphs over a network to perform remote procedure calls
+net-wireless/uhd 9999: The USRP Hardware Driver Repository
+sci-libs/volk 9999: vector optimized library of kernels
