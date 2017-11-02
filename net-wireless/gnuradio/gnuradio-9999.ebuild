@@ -1,7 +1,7 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=5
+EAPI=6
 PYTHON_COMPAT=( python2_7 )
 
 CMAKE_BUILD_TYPE="None"
@@ -13,6 +13,7 @@ LICENSE="GPL-3"
 SLOT="0/${PV}"
 
 EGIT_REPO_URI=( https://github.com/gnuradio/gnuradio.git )
+EGIT_SUBMODULES=()
 KEYWORDS=""
 
 IUSE="+audio +alsa atsc +analog +digital channels doc dtv examples fcd fec +filter grc jack log noaa oss pager performance-counters portaudio +qt4 sdl test trellis uhd vocoder +utils wavelet wxwidgets zeromq"
@@ -37,6 +38,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 # comedi? ( >=sci-electronics/comedilib-0.8 )
 # boost-1.52.0 is blacklisted, bug #461578, upstream #513, boost #7669
 RDEPEND="${PYTHON_DEPS}
+	sci-libs/volk:=
 	>=dev-lang/orc-0.4.12
 	dev-libs/boost:0=[${PYTHON_USEDEP}]
 	!<=dev-libs/boost-1.52.0-r6:0/1.52
@@ -102,6 +104,7 @@ src_prepare() {
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
 	epatch_user
+	cmake-utils_src_prepare
 }
 
 src_configure() {
@@ -116,39 +119,40 @@ src_configure() {
 		-DENABLE_GR_BLOCKS=ON
 		-DENABLE_GR_FFT=ON
 		-DENABLE_GR_AUDIO=ON
-		$(cmake-utils_use_enable alsa GR_AUDIO_ALSA) \
-		$(cmake-utils_use_enable analog GR_ANALOG) \
-		$(cmake-utils_use_enable atsc GR_ATSC) \
-		$(cmake-utils_use_enable channels GR_CHANNELS) \
-		$(cmake-utils_use_enable digital GR_DIGITAL) \
-		$(cmake-utils_use_enable doc DOXYGEN) \
-		$(cmake-utils_use_enable doc SPHINX) \
-		$(cmake-utils_use_enable dtv GR_DTV) \
-		$(cmake-utils_use_enable fcd GR_FCD) \
-		$(cmake-utils_use_enable fec GR_FEC) \
-		$(cmake-utils_use_enable filter GR_FILTER) \
-		$(cmake-utils_use_enable grc GRC) \
-		$(cmake-utils_use_enable jack GR_AUDIO_JACK) \
-		$(cmake-utils_use_enable log GR_LOG) \
-		$(cmake-utils_use_enable noaa GR_NOAA) \
-		$(cmake-utils_use_enable oss GR_AUDIO_OSS) \
-		$(cmake-utils_use_enable pager GR_PAGER) \
-		$(cmake-utils_use_enable performance-counters ENABLE_PERFORMANCE_COUNTERS) \
-		$(cmake-utils_use_enable portaudio GR_AUDIO_PORTAUDIO) \
-		$(cmake-utils_use_enable test TESTING) \
-		$(cmake-utils_use_enable trellis GR_TRELLIS) \
-		$(cmake-utils_use_enable uhd GR_UHD) \
-		$(cmake-utils_use_enable utils GR_UTILS) \
-		$(cmake-utils_use_enable vocoder GR_VOCODER) \
-		$(cmake-utils_use_enable wavelet GR_WAVELET) \
-		$(cmake-utils_use_enable wxwidgets GR_WXGUI) \
-		$(cmake-utils_use_enable qt4 GR_QTGUI) \
-		$(cmake-utils_use_enable sdl GR_VIDEO_SDL) \
-		$(cmake-utils_use_enable zeromq GR_ZEROMQ) \
+		-DENABLE_GR_AUDIO_ALSA=$(usex alsa)
+		-DENABLE_GR_ANALOG=$(usex analog)
+		-DENABLE_GR_ATSC=$(usex atsc)
+		-DENABLE_GR_CHANNELS=$(usex channels)
+		-DENABLE_GR_DIGITAL=$(usex digital)
+		-DENABLE_DOXYGEN=$(usex doc)
+		-DENABLE_SPHINX=$(usex doc)
+		-DENABLE_GR_DTV=$(usex dtv)
+		-DENABLE_GR_FCD=$(usex fcd)
+		-DENABLE_GR_FEC=$(usex fec)
+		-DENABLE_GR_FILTER=$(usex filter)
+		-DENABLE_GRC=$(usex grc)
+		-DENABLE_GR_AUDIO_JACK=$(usex jack)
+		-DENABLE_GR_LOG=$(usex log)
+		-DENABLE_GR_NOAA=$(usex noaa)
+		-DENABLE_GR_AUDIO_OSS=$(usex oss)
+		-DENABLE_GR_PAGER=$(usex pager)
+		-DENABLE_ENABLE_PERFORMANCE_COUNTERS=$(usex performance-counters)
+		-DENABLE_GR_AUDIO_PORTAUDIO=$(usex portaudio)
+		-DENABLE_TESTING=$(usex test)
+		-DENABLE_GR_TRELLIS=$(usex trellis)
+		-DENABLE_GR_UHD=$(usex uhd)
+		-DENABLE_GR_UTILS=$(usex utils)
+		-DENABLE_GR_VOCODER=$(usex vocoder)
+		-DENABLE_GR_WAVELET=$(usex wavelet)
+		-DENABLE_GR_WXGUI=$(usex wxwidgets)
+		-DENABLE_GR_QTGUI=$(usex qt4)
+		-DENABLE_GR_VIDEO_SDL=$(usex sdl)
+		-DENABLE_GR_ZEROMQ=$(usex zeromq)
 		-DENABLE_GR_CORE=ON \
 		-DSYSCONFDIR="${EPREFIX}"/etc \
 		-DPYTHON_EXECUTABLE="${PYTHON}"
 		-DGR_PKG_DOC_DIR="${EPREFIX}/usr/share/doc/${PF}"
+		-DENABLE_INTERNAL_VOLK=OFF
 	)
 	use vocoder && mycmakeargs+=( -DGR_USE_SYSTEM_LIBGSM=TRUE )
 	cmake-utils_src_configure
