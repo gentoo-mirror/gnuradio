@@ -5,5 +5,5 @@ EAPI=6
 HOMEPAGE=https://github.com/daniestevez/libfec
 LICENSE=LGPL-2.1
 SLOT=0/9999
-_eclasses_=git-r3	8f6de46b0aa318aea0e8cac62ece098b
+_eclasses_=git-r3	918d6a744039c29af2cadc7317459765
 _md5_=df10fe8d22f823b8319bff043c7cb493
