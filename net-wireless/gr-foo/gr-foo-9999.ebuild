@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 DESCRIPTION="Some additional blocks like packetpad that are required by, e.g., gr-ieee80211"
 HOMEPAGE="https://github.com/bastibl/gr-foo"

@@ -1,7 +1,7 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 DESCRIPTION="Blocks for transmitting and receiving Hubsan X4 controller signals"
 HOMEPAGE="https://github.com/miek/gr-hubsan"
