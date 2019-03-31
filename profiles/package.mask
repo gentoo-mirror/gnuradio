@@ -31,8 +31,9 @@
 # Requires libfec
 =net-wireless/gr-satellites-9999
 
-# Cannot find QT4 for some reason
+# Depends on Qt4
 =net-wireless/gr-inspector-9999
+=net-wireless/gr-display-9999
 
 # Fails looking for uhd/utils/thread.hpp
 =net-wireless/gr-analysis-9999
