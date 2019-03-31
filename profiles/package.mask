@@ -62,3 +62,6 @@
 
 # Could NOT find NOVA (missing:  NOVA_LIBRARIES NOVA_INCLUDE_DIRS)
 =net-wireless/gr-satnogs-9999
+
+# Depends on missing package: dev-python/pyqwt:5
+=net-wireless/gr-ofdm-9999
