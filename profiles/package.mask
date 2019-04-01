@@ -16,9 +16,10 @@
 =net-wireless/gr-supacars-9999
 =net-wireless/gr-amps-9999
 
-# This package seems to be integrated into the core gnuradio package now
-# (Fails due to file collisions)
+# These packages seem to be integrated into the core gnuradio package now
+# (Fail due to file collisions)
 =net-wireless/gr-pager-9999
+=sci-libs/volk-9999
 
 # Causes gnuradio's docstring loader to crash
 =net-wireless/gr-radar-9999
