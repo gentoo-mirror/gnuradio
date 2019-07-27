@@ -5,7 +5,8 @@ DESCRIPTION=Perseus Software Defined Radio Control Library for Linux
 EAPI=7
 HOMEPAGE=https://github.com/Microtelecom/libperseus-sdr
 LICENSE=GPL-3
+PROPERTIES=live
 RDEPEND=virtual/libusb:1=
 SLOT=0/9999
-_eclasses_=git-r3	0d4635eeb5a96cd5315597a47eba25c9
+_eclasses_=git-r3	562b380fc59ae6a8622171d0acb777d1
 _md5_=5ca0bd5bd3b2b834c14ba4eb9ac72768
