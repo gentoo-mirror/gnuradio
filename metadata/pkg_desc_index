@@ -1,0 +1,127 @@
+net-libs/libad9361 9999: IIO AD9361 library for filter design and handling, multi-chip sync, etc.
+net-libs/libfec 9999: Clone of Phil Karn's libfec with capability to build on x86-64
+net-libs/libiio 9999: Library for interfacing with IIO devices
+net-libs/libosmo-dsp 9999: Osmocom DSP utility functions
+net-libs/libperseus-sdr 9999: Perseus Software Defined Radio Control Library for Linux
+net-wireless/gnuradio 9999: Toolkit that provides signal processing blocks to implement software radios
+net-wireless/gr-acars2 9999: GNU Radio block for ACARS transmissions
+net-wireless/gr-adsb 9999: GNU Radio ADSB decoder and framer
+net-wireless/gr-air-modes 9999: GNU Radio Mode-S/ADS-B decoder
+net-wireless/gr-ais 9999: Decodes Automatic Information System for shipborne position reporting
+net-wireless/gr-ale 9999: MIL-STD-188-141a (ALE 2G) decoding block for gnuradio
+net-wireless/gr-ambe3000 9999: Processing DStar audio with a DV3000U dongle
+net-wireless/gr-amps 9999: modern gnuradio blocks for AMPS mobile devices
+net-wireless/gr-analysis 9999: Analysis tools for high sample rate recordings
+net-wireless/gr-ax25 9999: GNU Radio block for ax.25 routines
+net-wireless/gr-baz 9999: Collection of new blocks for GNU Radio http://wiki.spench.net/wiki/gr-baz
+net-wireless/gr-benchmark 9999: Performance measurement tool for GNU Radio
+net-wireless/gr-bluetooth 9999: Bluetooth receiver implementation for GNU Radio
+net-wireless/gr-bokehgui 9999: Web based display for GNU Radio
+net-wireless/gr-bruninga 9999: AFSK1200 for GNU Radio
+net-wireless/gr-burst 9999: Burst PSK Modem Building Blocks for GNU Radio
+net-wireless/gr-cdma 9999: CDMA physical layer for Gnuradio
+net-wireless/gr-clenabled 9999: OpenCL/GPU-enabled common blocks for GNURadio
+net-wireless/gr-compat 9999: Compatibility layer for various gnuradio APIs and libraries
+net-wireless/gr-correctiq 9999: GNU Radio block to remove that IQ DC spike
+net-wireless/gr-csp 9999: Cubesat Space Protocol for Gnuradio
+net-wireless/gr-dab 9999: GNU Radio block for digital audio broadcasting
+net-wireless/gr-dect2 9999: DECT analyzer for GNU Radio
+net-wireless/gr-display 9999: QT based PNG display sink for gnuradio
+net-wireless/gr-doa 9999: Direction of arrival Algorithms - Intended to be used with TwinRX
+net-wireless/gr-drm 9999: DRM transmitter using GNU Radio
+net-wireless/gr-dsd 9999: GNU Radio block for Digital Speech Decoder
+net-wireless/gr-dsss 9999: GNU Radio block for Direct Sequence Spread Spectrum
+net-wireless/gr-dvbs2 9999: DVB-S2 and DVB-S2X transmitter for GNU Radio
+net-wireless/gr-dvbt 9999: DVB-T implementation in gnuradio
+net-wireless/gr-dvbt2 9999: DVB-T2 transmitter for GNU Radio
+net-wireless/gr-eb200 9999: GNU Radio block for communication using the EB200 protocol
+net-wireless/gr-elster 9999: GNU Radio block for decoding packets transmitted by Elster R2S smart meters
+net-wireless/gr-ettus 9999: Out-of-tree Module for Experimental Ettus Research Features
+net-wireless/gr-eventstream 9999: Translation between streams of data and scheduled-finite length events
+net-wireless/gr-fbmc 9999: GNU Radio FBMC PHY
+net-wireless/gr-fcdproplus 9999: GNURadio funcube dongle pro+ source
+net-wireless/gr-filerepeater 9999: Control File Source replay with repeat delays and counts
+net-wireless/gr-finite-stream 9999: Blocks for handling finite-length streams
+net-wireless/gr-flarm 9999: FLARM receiver for GNU Radio
+net-wireless/gr-flexfft 9999: GNURadio module for working with Flex FFT data
+net-wireless/gr-fm0 9999: Minimalistic FM0 encoder
+net-wireless/gr-foo 9999: Some additional blocks like packetpad that are required by, e.g., gr-ieee80211
+net-wireless/gr-fosphor 9999: RTSA-like spectrum visualization using OpenCL and OpenGL
+net-wireless/gr-framers 9999: Framer and Deframer Blocks for GNU Radio
+net-wireless/gr-fsk-burst 9999: GNU Radio message based burst FSK Transmitter and Receiver
+net-wireless/gr-gpredict-doppler 9999: GNU Radio Gpredict Doppler shift correction block
+net-wireless/gr-gps 9999: GNU Radio block for a GPS receiver
+net-wireless/gr-grnet 9999: TCP and UDP source/sink blocks rewritten in C++/Boost
+net-wireless/gr-gsm 9999: Set of tools for receiving information transmitted by GSM equipment/devices
+net-wireless/gr-ham 9999: GNU Radio blocks useful for amateur radio
+net-wireless/gr-hpsdr 9999: Interface module for HPSDR Hermes / Metis
+net-wireless/gr-husban 9999: Blocks for transmitting and receiving Hubsan X4 controller signals
+net-wireless/gr-ieee80211 9999: IEEE 802.11 a/g/p Transceiver
+net-wireless/gr-ieee802154 9999: IEEE 802.15.4 ZigBee Transceiver
+net-wireless/gr-iio 9999: GNU Radio IIO Blocks
+net-wireless/gr-inspector 9999: GNU Radio Signal Analysis Toolbox
+net-wireless/gr-iqbal 9999: gnuradio I/Q balancing
+net-wireless/gr-iridium 9999: Iridium burst detector and demodulator
+net-wireless/gr-isdbt 9999: DTV ISDB-T in GNURadio
+net-wireless/gr-keyfob 9999: GNU Radio block for Hella wireless car key fobs
+net-wireless/gr-kiss 9999: GNU Radio blocks for KISS and AX.25
+net-wireless/gr-lacrosse 9999: GNU Radio module for La Crosse weather stations
+net-wireless/gr-ldpc 9999: Encoder and decoder for LDPC codes
+net-wireless/gr-lfast 9999: A few performance-enhanced GNURadio blocks (Costas Loop, AGC, and others)
+net-wireless/gr-lilacsat 9999: Harbin Institute of Technology LilacSat-2 satellite telemetry
+net-wireless/gr-lora 9999: LoRA LPWAN PHY
+net-wireless/gr-lpwan 9999: Implementations of LPWAN PHYs
+net-wireless/gr-lte 9999: GNU Radio block for LTE signals
+net-wireless/gr-mac 9999: Easy-to-use MAC-layer implementations for GNU Radio
+net-wireless/gr-mapper 9999: Symbol to Bit Mapping and Demapping Blocks for GNU Radio
+net-wireless/gr-mediatools 9999: FFmpeg and gnu radio integration
+net-wireless/gr-mer 9999: QAM Modulation error measurements.
+net-wireless/gr-message_tools 9999: Simple message debugging tools
+net-wireless/gr-microtelecom 9999: Perseus SDR source module
+net-wireless/gr-mixalot 9999: GNU Radio pager encoder
+net-wireless/gr-multimon 9999: multimon gnuradio wrapper
+net-wireless/gr-nacl 9999: GNU Radio module for data encryption using NaCl
+net-wireless/gr-nmea 9999: NMEA0183 GPS to message source
+net-wireless/gr-nordic 9999: Nordic Semiconductor nRF24L Enhanced Shockburst Protocol
+net-wireless/gr-nrsc5 9999: HD Radio transmitter for GNU Radio
+net-wireless/gr-ofdm 9999: A complete OFDM implementation including GUI for reasearch and teaching
+net-wireless/gr-op25 9999: Implementation of the APCO Project 25 digital radio standard
+net-wireless/gr-osmosdr 9999: GNU Radio source block for OsmoSDR and rtlsdr and hackrf
+net-wireless/gr-outernet 9999: Outernet decoder
+net-wireless/gr-packetradio 9999: APRS for GNU Radio
+net-wireless/gr-pager 9999: Motorola FLEX Receiver
+net-wireless/gr-paint 9999: OFDM Spectrum Painter for GNU Radio
+net-wireless/gr-pcap 9999: PCAP recording and playback
+net-wireless/gr-pico 9999: OOT modules for DRS Picoflexor and Picoflexor Transceiver
+net-wireless/gr-pocsag 9999: Multichannel POCSAG receiver for gnuradio
+net-wireless/gr-polaris 9999: GNU Radio OOT module for the Polaris Receiver
+net-wireless/gr-psk-burst 9999: GNU Radio message based burst PSK Transmitter and Receiver
+net-wireless/gr-psk31 9999: Tutorial on using psk31 with GNU Radio
+net-wireless/gr-pyqt 9999: PyQt based plotters intended for plotting bursted events in gnuradio
+net-wireless/gr-ra_blocks 9999: Helper blocks for simple_ra
+net-wireless/gr-radar 9999: GNU Radio Radar Toolbox
+net-wireless/gr-rds 9999: FM RDS/TMC Transceiver
+net-wireless/gr-remotecar 9999: control a toy remote controlled car using gnuradio and HackRF
+net-wireless/gr-reveng 9999: GNU Radio block for reverse engineering RF protocols
+net-wireless/gr-rftap 9999: RFtap Module for GNU Radio
+net-wireless/gr-rstt 9999: Vaisala Radiosonde Telemetry Receiver
+net-wireless/gr-rtty 9999: RTTY decoder for Gnuradio
+net-wireless/gr-satellites 9999: GNU Radio decoders for several Amateur satellites
+net-wireless/gr-satnogs 9999: SatNOGS GNU Radio Out-Of-Tree Module
+net-wireless/gr-signal_exciter 9999: Tools for efficient generation of wideband populated spectrum
+net-wireless/gr-smartnet 9999: Motorola Smartnet II trunking logging scanner for Gnuradio
+net-wireless/gr-smithchart 9999: pyQT based smith chart for GNU Radio
+net-wireless/gr-specest 9999: Spectral estimation routines for GNU Radio
+net-wireless/gr-streamsink 9999: GNURadio sink to stream audio to SHOUTcast/Icecast
+net-wireless/gr-supacars 9999: Open source ACARS decoder and ACARS Parser
+net-wireless/gr-symbolrate 9999: Calc digital symbol rates from binary slicer stream output
+net-wireless/gr-tagutils 9999: Blocks useful for working with Stream Tags
+net-wireless/gr-tf 9999: Rapid TensorFlow GPU/CPU Accelerated Blocks for GNU Radio
+net-wireless/gr-theano 9999: Rapid GPU Accelerated Blocks for GNU Radio
+net-wireless/gr-tpms 9999: GNU Radio block for Tire Pressure Monitor tools
+net-wireless/gr-tutorial 9999: Tutorial OOT module for GNU Radio
+net-wireless/gr-uhdgps 9999: Blocks to assist in GPS Data logging with UHD and a GPSDO
+net-wireless/gr-ysf 9999: GNU Radio modules for decoding Yaesu System Fusion C4FM packets
+net-wireless/gr-zmqblocks 9999: Connect to flowgraphs over a network to perform remote procedure calls
+net-wireless/uhd 3.15.0.0-r1 9999: The USRP Hardware Driver Repository
+sci-libs/volk 9999: vector optimized library of kernels
