@@ -4,9 +4,10 @@ DEPEND=doc? ( app-doc/doxygen:= )
 DESCRIPTION=Osmocom DSP utility functions
 EAPI=7
 HOMEPAGE=https://github.com/osmocom/libosmo-dsp
+INHERIT=git-r3
 IUSE=doc
 LICENSE=GPL-2
 PROPERTIES=live
 SLOT=0/9999
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
 _md5_=ef7c20ee43509e73452f156b4020bcd5
